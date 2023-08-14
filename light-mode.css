@@ -1,0 +1,203 @@
+:root {
+  --bg-color: #fff;
+  --border-color: #818cf8;
+  --color: #111827;
+  --pcolor: #777777;
+}
+
+* {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.theme-toggle i {
+  color: var(--color);
+  left: 5px;
+  position: absolute;
+  top: 3px;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #f6f6f6 0%, #d7def0 100%);
+  background-attachment: fixed;
+  font-family: "Trebuchet MS", "apple-system", BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.625rem;
+}
+
+h2 {
+  color: var(--color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: initial;
+}
+
+a:active {
+  color: initial;
+  text-decoration: initial;
+}
+
+#profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1.25rem;
+}
+
+.profile-box {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.313rem;
+  color: var(--color);
+  display: flex;
+  margin: 10px 0px;
+  max-width: 31.25rem;
+  min-height: 9.375rem;
+  position: relative;
+  width: 100%;
+}
+
+.profile-picture {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  display: flex;
+  height: 154px;
+  width: 154px;
+}
+
+.profile-picture > img {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  line-height: 1.5;
+}
+
+.username {
+  font-size: 0.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.add {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+#links {
+  align-items: center;
+  color: var(--color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+#links > a {
+  padding: 8px;
+}
+
+.link {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 5px 10px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 106.36px;
+}
+
+.link:hover {
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article {
+  align-items: center;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--color);
+  cursor: pointer;
+  display: flex;
+  margin: 10px 0px;
+  max-width: 500px;
+  padding: 20px;
+  width: 100vw;
+}
+
+article:hover {
+  box-shadow: 0 10px 5px -5px #0000004d, 0 8px 10px -6px #0000004d;
+  transform: scale(1.03);
+}
+
+article img {
+  margin-right: 10px;
+}
+
+article p {
+  color: var(--pcolor);
+  line-height: normal;
+}
+
+article span {
+  display: flex;
+  position: relative;
+  left: 10px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+aside {
+  width: 100vw;
+}

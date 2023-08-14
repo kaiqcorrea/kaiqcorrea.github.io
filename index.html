@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="light-mode.css" id="theme-stylesheet">
+    <title>Kaique | Perfil</title>
+</head>
+
+<body>
+    <div id="profile">
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </button>
+        <div class="content" id="content">
+
+        </div>
+        <div class="profile-box">
+            <div class="profile-picture">
+                <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture">
+            </div>
+            <div class="profile-text">
+                <h1>Kaique</h1>
+                <p class="username">@kaiqcorrea</p>
+                <p>&#x1F4CD Goiânia • 28</p>
+                <p id="generate-vcard" class="add">adicionar
+                    <i class="fas fa-user-plus"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="links">
+        <a class="link" href="https://www.instagram.com/kaiqcorrea" target="_blank">
+            <i class="fab fa-instagram">&nbsp;</i>Instagram
+        </a>
+        <a class="link" href="https://twitter.com/kaiqcorrea" target="_blank">
+            <i class="fab fa-twitter">&nbsp;</i>Twitter
+        </a>
+        <a class="link" href="https://github.com/kaiqcorrea" target="_blank">
+            <i class="fab fa-github">&nbsp;</i>Github
+        </a>
+        <a class="link" href="https://steamcommunity.com/id/gryftis/" target="_blank">
+            <i class="fab fa-steam">&nbsp;</i>Steam
+        </a>
+    </div>
+
+    <section>
+        <article id="copyButton">
+            <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://discord.com/">
+            <aside>
+                <h2>Discord</h2>
+                <p>Clique aqui para copiar meu usuário:
+                <p id="textToCopy">kaiqcorrea</p>
+                </p>
+            </aside>
+            <span>
+                <i class="fas fa-plus">&nbsp;</i>Add
+            </span>
+        </article>
+        <a href="https://open.spotify.com/user/kaiqcorrea" target="_blank">
+            <article>
+                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
+                <aside>
+                    <h2>Spotify</h2>
+                    <p>Dê um play nesse perfil e conheça meu universo musical.</p>
+                </aside>
+                <span>
+                    <i class="fas fa-play">&nbsp;</i>Play
+                </span>
+            </article>
+        </a>
+        <a href="https://www.tvtime.com/pt_BR/user/16915692/profile" target="_blank">
+            <article>
+                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
+                <aside>
+                    <h2>TV Time</h2>
+                    <p>Explore minhas preferências em séries, filmes e animes.</p>
+                </aside>
+                <span>
+                    <i class="fas fa-external-link-alt">&nbsp;</i>Visitar
+                </span>
+            </article>
+        </a>
+    </section>
+
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+        const lightModeIcon = document.querySelector('.light-mode-icon');
+        const darkModeIcon = document.querySelector('.dark-mode-icon');
+        const additionalIcons = document.querySelectorAll('.additional-icon');
+
+        function toggleTheme() {
+            const currentTheme = themeStylesheet.getAttribute('href');
+            const newTheme = currentTheme.includes('light') ? 'dark-mode.css' : 'light-mode.css';
+
+            themeStylesheet.setAttribute('href', newTheme);
+            updateIcon(newTheme);
+            updateAdditionalIcons(newTheme);
+            saveThemePreference(newTheme);
+        }
+
+        function updateIcon(theme) {
+            const icon = theme.includes('light') ? 'fa-sun' : 'fa-moon';
+            themeToggle.innerHTML = `<i class="fas ${icon}"></i>`;
+
+            if (lightModeIcon && darkModeIcon) {
+                lightModeIcon.style.display = theme.includes('light') ? 'block' : 'none';
+                darkModeIcon.style.display = theme.includes('dark') ? 'block' : 'none';
+            }
+        }
+
+        function updateAdditionalIcons(theme) {
+            additionalIcons.forEach(iconElement => {
+                iconElement.style.display = theme.includes('light') ? 'block' : 'none';
+            });
+        }
+
+        function saveThemePreference(theme) {
+            localStorage.setItem('theme', theme);
+        }
+
+        function loadThemePreference() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                themeStylesheet.setAttribute('href', savedTheme);
+                updateIcon(savedTheme);
+                updateAdditionalIcons(savedTheme);
+            }
+        }
+
+        loadThemePreference();
+
+        themeToggle.addEventListener('click', toggleTheme);
+    </script>
+
+    <script>
+        document.getElementById('generate-vcard').addEventListener('click', function () {
+            const vcardData = {
+                firstName: 'Kaique',
+                lastName: 'Correa',
+                photoUrl: 'https://avatars0.githubusercontent.com/u/140029352',
+            };
+
+            const vcardContent = `
+        BEGIN:VCARD
+        VERSION:3.0
+        FN:${vcardData.firstName} ${vcardData.lastName}
+        N:${vcardData.lastName};${vcardData.firstName};;;
+        PHOTO;TYPE=JPEG:${vcardData.photoUrl}
+        END:VCARD`;
+
+            const blob = new Blob([vcardContent], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'contato.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    </script>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function () {
+            const textToCopy = document.getElementById('textToCopy').innerText;
+            const tempInput = document.createElement('input');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            alert('Texto copiado: ' + textToCopy);
+        });
+    </script>
+</body>
+
+</html>
