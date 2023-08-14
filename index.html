@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="light-mode.css" id="theme-stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Kaique | Perfil</title>
 </head>
 
@@ -157,9 +158,17 @@
             PHOTO;TYPE=JPEG:${vcardData.photoUrl}
             END:VCARD`;
 
-            const deepLink = `data:text/plain;charset=utf-8,${encodeURIComponent(vcardContent)}`;
+            const blob = new Blob([vcardContent], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
 
-            window.location.href = deepLink;
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'contato.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         });
     </script>
 
