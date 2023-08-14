@@ -150,24 +150,16 @@
             };
 
             const vcardContent = `
-        BEGIN:VCARD
-        VERSION:3.0
-        FN:${vcardData.firstName} ${vcardData.lastName}
-        N:${vcardData.lastName};${vcardData.firstName};;;
-        PHOTO;TYPE=JPEG:${vcardData.photoUrl}
-        END:VCARD`;
+            BEGIN:VCARD
+            VERSION:3.0
+            FN:${vcardData.firstName} ${vcardData.lastName}
+            N:${vcardData.lastName};${vcardData.firstName};;;
+            PHOTO;TYPE=JPEG:${vcardData.photoUrl}
+            END:VCARD`;
 
-            const blob = new Blob([vcardContent], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
+            const deepLink = `data:text/plain;charset=utf-8,${encodeURIComponent(vcardContent)}`;
 
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = 'contato.vcf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+            window.location.href = deepLink;
         });
     </script>
 
