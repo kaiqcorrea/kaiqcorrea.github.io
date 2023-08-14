@@ -2,15 +2,15 @@
 
 ### Share links to all your profiles and websites in one place.
 
+## 🌐 [Demo](https://kaiqcorrea.github.io/link-in-bio/)
 
 ## 📷 Preview
 
 ![markdown](https://github.com/kaiqcorrea/link-in-bio/blob/main/screenshot.jpg?raw=true)
 
-
 ## 💭 About The Project
 
-I am a beginner in web development and recently challenged myself to create my own version of the Linktree website. I am excited to share the outcome of this endeavor, which also happens to be my first open-source project. While working on it, I drew inspiration from two other websites to guide my design. Despite my foundational knowledge of HTML, I strived to achieve the best possible result. I look forward to further enhancing my skills as I continue to learn programming, as I believe this will lead to even greater improvements in my future projects.
+### I am a beginner in web development and recently challenged myself to create my own version of the Linktree website. I am excited to share the outcome of this endeavor, which also happens to be my first open-source project. While working on it, I drew inspiration from two other websites to guide my design. Despite my foundational knowledge of HTML, I strived to achieve the best possible result. I look forward to further enhancing my skills as I continue to learn programming, as I believe this will lead to even greater improvements in my future projects.
 
 ## 💡 My inspirations
 
