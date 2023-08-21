@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="dark-mode.css" id="theme-stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" id="theme-stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>Kaique | Perfil</title>
 </head>
 
@@ -14,10 +14,8 @@
     <div id="profile">
         <button id="theme-toggle" class="theme-toggle">
             <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
         </button>
-        <div class="content" id="content">
-
-        </div>
         <div class="profile-box">
             <div class="profile-picture">
                 <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture">
@@ -92,52 +90,60 @@
     <div id="stars3"></div>
 
     <script>
+        const $html = document.querySelector('html');
         const themeToggle = document.getElementById('theme-toggle');
-        const themeStylesheet = document.getElementById('theme-stylesheet');
-        const lightModeIcon = document.querySelector('.light-mode-icon');
-        const darkModeIcon = document.querySelector('.dark-mode-icon');
-        const additionalIcons = document.querySelectorAll('.additional-icon');
 
         function toggleTheme() {
-            const currentTheme = themeStylesheet.getAttribute('href');
-            const newTheme = currentTheme.includes('light') ? 'dark-mode.css' : 'light-mode.css';
-
-            themeStylesheet.setAttribute('href', newTheme);
-            updateIcon(newTheme);
-            updateAdditionalIcons(newTheme);
-            saveThemePreference(newTheme);
+            $html.classList.toggle('light-mode');
+            updateLocalStorage();
+            updateIcons();
+            updateStarsVisibility();
         }
 
-        function updateIcon(theme) {
-            const icon = theme.includes('light') ? 'fa-sun' : 'fa-moon';
-            themeToggle.innerHTML = `<i class="fas ${icon}"></i>`;
-
-            if (lightModeIcon && darkModeIcon) {
-                lightModeIcon.style.display = theme.includes('light') ? 'block' : 'none';
-                darkModeIcon.style.display = theme.includes('dark') ? 'block' : 'none';
-            }
-        }
-
-        function updateAdditionalIcons(theme) {
-            additionalIcons.forEach(iconElement => {
-                iconElement.style.display = theme.includes('light') ? 'block' : 'none';
-            });
-        }
-
-        function saveThemePreference(theme) {
-            localStorage.setItem('theme', theme);
+        function updateLocalStorage() {
+            localStorage.setItem('themePreference', $html.classList.contains('light-mode') ? 'light' : 'dark');
         }
 
         function loadThemePreference() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                themeStylesheet.setAttribute('href', savedTheme);
-                updateIcon(savedTheme);
-                updateAdditionalIcons(savedTheme);
+            const themePreference = localStorage.getItem('themePreference');
+            if (themePreference === 'light') {
+                $html.classList.add('light-mode');
             }
         }
 
         loadThemePreference();
+
+        function updateIcons() {
+            const moonIcon = document.querySelector('.fa-moon');
+            const sunIcon = document.querySelector('.fa-sun');
+
+            if ($html.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        }
+
+        updateIcons();
+        updateStarsVisibility();
+
+        function updateStarsVisibility() {
+            const stars1 = document.getElementById('stars1');
+            const stars2 = document.getElementById('stars2');
+            const stars3 = document.getElementById('stars3');
+
+            if ($html.classList.contains('light-mode')) {
+                stars1.style.display = 'none';
+                stars2.style.display = 'none';
+                stars3.style.display = 'none';
+            } else {
+                stars1.style.display = 'block';
+                stars2.style.display = 'block';
+                stars3.style.display = 'block';
+            }
+        }
 
         themeToggle.addEventListener('click', toggleTheme);
     </script>

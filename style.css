@@ -3,6 +3,19 @@
   --border-color: #6b7280;
   --color: #f6f6f6;
   --pcolor: #a1a1a1;
+  --body-gradient1: #1b2735;
+  --body-gradient2: #090a0f;
+  --box-shadow: #ffffff4d;
+}
+
+.light-mode:root {
+  --bg-color: #fff;
+  --border-color: #818cf8;
+  --color: #111827;
+  --pcolor: #777777;
+  --body-gradient1: #f6f6f6;
+  --body-gradient2: #d7def0;
+  --box-shadow: #0000004d;
 }
 
 * {
@@ -26,16 +39,15 @@
 }
 
 body {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(
+    ellipse at bottom,
+    var(--body-gradient1) 0%,
+    var(--body-gradient2) 100%
+  );
   font-family: "Trebuchet MS", "apple-system", BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 h1,
@@ -61,6 +73,7 @@ h2 {
 
 a {
   text-decoration: initial;
+  z-index: 1;
 }
 
 a:active {
@@ -87,6 +100,7 @@ a:active {
   min-height: 9.375rem;
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .profile-picture {
@@ -139,7 +153,7 @@ a:active {
 
 .link {
   align-items: center;
-  background-color: transparent;
+  background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 5px;
   color: var(--color);
@@ -155,7 +169,7 @@ a:active {
 }
 
 .link:hover {
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--color);
 }
 
@@ -179,10 +193,11 @@ article {
   max-width: 500px;
   padding: 20px;
   width: 100vw;
+  z-index: 1;
 }
 
 article:hover {
-  box-shadow: 0 8px 5px -5px #ffffff4d, 0 8px 10px -6px #0000004d;
+  box-shadow: 0 8px 4px -4px var(--box-shadow);
   transform: scale(1.03);
 }
 
@@ -226,6 +241,7 @@ aside {
   height: 1px;
   background: transparent;
   animation: animStar 20s linear infinite;
+  z-index: -1;
 
   box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
@@ -413,6 +429,7 @@ aside {
   width: 1px;
   height: 1px;
   background: transparent;
+  z-index: -1;
 
   box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
@@ -598,6 +615,7 @@ aside {
   height: 2px;
   background: transparent;
   animation: animStar 40s linear infinite;
+  z-index: -1;
 
   box-shadow: 1448px 320px #fff, 1775px 1663px #fff, 332px 1364px #fff,
     878px 340px #fff, 569px 1832px #fff, 1422px 1684px #fff, 1946px 1907px #fff,
@@ -659,6 +677,7 @@ aside {
   width: 2px;
   height: 2px;
   background: transparent;
+  z-index: -1;
 
   box-shadow: 1448px 320px #fff, 1775px 1663px #fff, 332px 1364px #fff,
     878px 340px #fff, 569px 1832px #fff, 1422px 1684px #fff, 1946px 1907px #fff,
@@ -718,6 +737,7 @@ aside {
   height: 3px;
   background: transparent;
   animation: animStar 80s linear infinite;
+  z-index: -1;
 
   box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
     948px 1828px #fff, 1977px 1001px #fff, 1284px 1963px #fff, 656px 284px #fff,
@@ -754,6 +774,7 @@ aside {
   width: 3px;
   height: 3px;
   background: transparent;
+  z-index: -1;
 
   box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
     948px 1828px #fff, 1977px 1001px #fff, 1284px 1963px #fff, 656px 284px #fff,
