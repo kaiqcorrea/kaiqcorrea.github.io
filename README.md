@@ -2,7 +2,7 @@
 
 ### Share links to all your profiles and websites in one place.
 
-## 🌐 [Demo](https://kaiqcorrea.github.io/link-in-bio/)
+## 🌐 [Demo](https://kaiqcorrea.github.io/)
 
 ## 📷 Preview
 
