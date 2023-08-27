@@ -1,0 +1,58 @@
+/*!
+ * Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+
+.fab,
+.fas,
+.fa-brands,
+.fa-solid {
+    display: inline-block;
+    font-style: normal;
+}
+
+.fa-solid,.fas {
+    font-family: "Font Awesome 6 Free";
+}
+
+.fa-brands,.fab {
+    font-family: "Font Awesome 6 Brands"
+}
+
+.fa-moon:before{content:"\f186"}
+.fa-sun:before{content:"\f185"}
+.fa-user-plus:before{content:"\f234"}
+.fa-plus:before{content:"\2b"}
+.fa-play:before{content:"\f04b"}
+.fa-external-link-alt:before{content:"\f08e"}
+
+.fa-instagram:before{content:"\f16d"}
+.fa-square-instagram:before{content:"\e055"}
+.fa-twitter:before{content:"\f099"}
+.fa-x-twitter:before{content:"\e61b"}
+.fa-square-x-twitter:before{content:"\e61a"}
+.fa-github:before{content:"\f09b"}
+.fa-square-github:before{content:"\f092"}
+.fa-steam:before{content:"\f1b6"}
+.fa-steam-square:before{content:"\f1b7"}
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: 
+    url(../fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
+    url(../fontawesome/webfonts/fa-brands-400.ttf) format("truetype")
+}
+    
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: 
+    url(../fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
+    url(../fontawesome/webfonts/fa-solid-900.ttf) format("truetype")
+}
