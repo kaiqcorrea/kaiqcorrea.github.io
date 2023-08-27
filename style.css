@@ -147,10 +147,6 @@ a:active {
   margin: 10px 0px;
 }
 
-#links > a {
-  padding: 8px;
-}
-
 .link {
   align-items: center;
   background-color: var(--bg-color);
@@ -159,13 +155,14 @@ a:active {
   color: var(--color);
   cursor: pointer;
   display: flex;
-  font-size: 1rem;
+  font-size: 2rem;
   justify-content: center;
-  margin: 5px 10px;
-  padding: 10px;
+  margin: auto 10px;
+  padding: 8px;
   position: relative;
   text-align: center;
-  width: 106.36px;
+  height: 48px;
+  width: 48px;
 }
 
 .link:hover {
