@@ -12,47 +12,76 @@
     font-style: normal;
 }
 
-.fa-solid,.fas {
+.fa-solid,
+.fas {
     font-family: "Font Awesome 6 Free";
 }
 
-.fa-brands,.fab {
+.fa-brands,
+.fab {
     font-family: "Font Awesome 6 Brands"
 }
 
-.fa-moon:before{content:"\f186"}
-.fa-sun:before{content:"\f185"}
-.fa-user-plus:before{content:"\f234"}
-.fa-plus:before{content:"\2b"}
-.fa-play:before{content:"\f04b"}
-.fa-external-link-alt:before{content:"\f08e"}
+.fa-moon:before {
+    content: "\f186"
+}
 
-.fa-instagram:before{content:"\f16d"}
-.fa-square-instagram:before{content:"\e055"}
-.fa-twitter:before{content:"\f099"}
-.fa-x-twitter:before{content:"\e61b"}
-.fa-square-x-twitter:before{content:"\e61a"}
-.fa-github:before{content:"\f09b"}
-.fa-square-github:before{content:"\f092"}
-.fa-steam:before{content:"\f1b6"}
-.fa-steam-square:before{content:"\f1b7"}
+.fa-sun:before {
+    content: "\f185"
+}
+
+.fa-user-plus:before {
+    content: "\f234"
+}
+
+.fa-plus:before {
+    content: "\2b"
+}
+
+.fa-play:before {
+    content: "\f04b"
+}
+
+.fa-external-link-alt:before {
+    content: "\f08e"
+}
+
+.fa-check-circle:before {
+    content: "\f058";
+}
+
+.fa-instagram:before {
+    content: "\f16d"
+}
+
+.fa-x-twitter:before {
+    content: "\e61b"
+}
+
+.fa-github:before {
+    content: "\f09b"
+}
+
+.fa-steam:before {
+    content: "\f1b6"
+}
 
 @font-face {
     font-family: "Font Awesome 6 Brands";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: 
-    url(../fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
-    url(../fontawesome/webfonts/fa-brands-400.ttf) format("truetype")
+    src:
+        url(../fontawesome/webfonts/fa-brands-400.woff2) format("woff2"),
+        url(../fontawesome/webfonts/fa-brands-400.ttf) format("truetype")
 }
-    
+
 @font-face {
     font-family: "Font Awesome 6 Free";
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: 
-    url(../fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
-    url(../fontawesome/webfonts/fa-solid-900.ttf) format("truetype")
+    src:
+        url(../fontawesome/webfonts/fa-solid-900.woff2) format("woff2"),
+        url(../fontawesome/webfonts/fa-solid-900.ttf) format("truetype")
 }
