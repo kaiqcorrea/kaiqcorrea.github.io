@@ -23,14 +23,20 @@
             <div class="profile-text">
                 <h1>Kaique</h1>
                 <p class="username">@kaiqcorrea</p>
-                <p>&#x1F4CD Goiânia • 28</p>
-                <p id="generate-vcard" class="add">adicionar
+                <span>&#x1F4CD Goiânia • 28</span>
+                <a id="download-link" class="add" href="./download/contato.vcf" download onclick="showToast()"><span
+                        class="add2">adicionar</span>
                     <i class="fas fa-user-plus"></i>
-                </p>
+                </a>
             </div>
         </div>
     </div>
-
+    <div class="popup">
+        <p><i class="fas fa-check-circle">&nbsp;</i> Agora você pode abrir o arquivo baixado e salvar o contato na sua
+            agenda.</p>
+        <button class="close-button" onclick="closeToast()">&times;</button>
+    </div>
+    </div>
     <div id="links">
         <a class="link" href="https://www.instagram.com/kaiqcorrea" target="_blank">
             <i class="fab fa-instagram"></i>
@@ -84,122 +90,11 @@
             </article>
         </a>
     </section>
-
     <div id="stars1"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
-
-    <script>
-        const $html = document.querySelector('html');
-        const themeToggle = document.getElementById('theme-toggle');
-
-        function toggleTheme() {
-            $html.classList.toggle('light-mode');
-            updateLocalStorage();
-            updateIcons();
-            updateStarsVisibility();
-        }
-
-        function updateLocalStorage() {
-            localStorage.setItem('themePreference', $html.classList.contains('light-mode') ? 'light' : 'dark');
-        }
-
-        function loadThemePreference() {
-            const themePreference = localStorage.getItem('themePreference');
-            if (themePreference === 'light') {
-                $html.classList.add('light-mode');
-            }
-        }
-
-        loadThemePreference();
-
-        function updateIcons() {
-            const moonIcon = document.querySelector('.fa-moon');
-            const sunIcon = document.querySelector('.fa-sun');
-
-            if ($html.classList.contains('light-mode')) {
-                moonIcon.style.display = 'none';
-                sunIcon.style.display = 'inline';
-            } else {
-                moonIcon.style.display = 'inline';
-                sunIcon.style.display = 'none';
-            }
-        }
-
-        updateIcons();
-        updateStarsVisibility();
-
-        function updateStarsVisibility() {
-            const stars1 = document.getElementById('stars1');
-            const stars2 = document.getElementById('stars2');
-            const stars3 = document.getElementById('stars3');
-
-            if ($html.classList.contains('light-mode')) {
-                stars1.style.display = 'none';
-                stars2.style.display = 'none';
-                stars3.style.display = 'none';
-            } else {
-                stars1.style.display = 'block';
-                stars2.style.display = 'block';
-                stars3.style.display = 'block';
-            }
-        }
-
-        themeToggle.addEventListener('click', toggleTheme);
-    </script>
-
-    <script>
-        document.getElementById('generate-vcard').addEventListener('click', function () {
-            const vcardData = {
-                firstName: 'Kaique',
-                lastName: 'Correa',
-                photoUrl: 'https://avatars0.githubusercontent.com/u/140029352',
-            };
-
-            const vcardContent = `
-            BEGIN:VCARD
-            VERSION:3.0
-            FN:${vcardData.firstName} ${vcardData.lastName}
-            N:${vcardData.lastName};${vcardData.firstName};;;
-            PHOTO;TYPE=JPEG:${vcardData.photoUrl}
-            END:VCARD`;
-
-            const blob = new Blob([vcardContent], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = 'contato.vcf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        });
-    </script>
-
-    <script>
-        document.getElementById('copyButton').addEventListener('click', function () {
-            const textToCopy = document.getElementById('textToCopy').innerText;
-            const tempInput = document.createElement('input');
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-
-            alert('Texto copiado: ' + textToCopy);
-        });
-    </script>
+    <script src="./script.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-MFGYPJ17VK');
-    </script>
 </body>
-
 </html>
