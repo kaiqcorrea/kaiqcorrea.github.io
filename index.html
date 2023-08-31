@@ -4,6 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="style" href="./style.css">
+    <link rel="preload" as="style" href="./fontawesome/all.min.css">
+    <link rel="preload" as="font" href="./fontawesome/webfonts/fa-brands-400.woff2">
+    <link rel="preload" as="font" href="./fontawesome/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" href="./fontawesome/webfonts/fa-brands-400.ttf">
+    <link rel="preload" as="font" href="./fontawesome/webfonts/fa-solid-900.ttf">
+    <link rel="preload" as="script" href="./script.js">
+    <link rel="preconnect" as="image" href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
+    <link rel="preconnect" as="image"
+        href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://discord.com/">
+    <link rel="preconnect" as="image"
+        href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
+    <link rel="preconnect" as="script" href="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK">
+    <link rel="preconnect" as="image" href="https://avatars0.githubusercontent.com/u/140029352">
     <link rel="stylesheet" href="./fontawesome/all.min.css">
     <link rel="stylesheet" href="./style.css" id="theme-stylesheet">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -18,14 +32,14 @@
         </button>
         <div class="profile-box">
             <div class="profile-picture">
-                <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture">
+                <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture"
+                    fetchpriority="high">
             </div>
             <div class="profile-text">
                 <h1>Kaique</h1>
                 <p class="username">@kaiqcorrea</p>
                 <span>&#x1F4CD Goiânia • 28</span>
-                <a id="download-link" class="add" href="./download/contato.vcf" download onclick="showToast()"><span
-                        class="add2">adicionar</span>
+                <a class="add" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()"><span class="add2">adicionar</span>
                     <i class="fas fa-user-plus"></i>
                 </a>
             </div>
@@ -54,7 +68,8 @@
 
     <section>
         <article id="copyButton">
-            <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://discord.com/">
+            <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://discord.com/"
+                fetchpriority="high">
             <aside>
                 <h2>Discord</h2>
                 <p>Clique aqui para copiar meu usuário:
@@ -67,7 +82,8 @@
         </article>
         <a href="https://open.spotify.com/user/kaiqcorrea" target="_blank">
             <article>
-                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
+                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com"
+                    fetchpriority="high">
                 <aside>
                     <h2>Spotify</h2>
                     <p>Dê um play nesse perfil e conheça meu universo musical.</p>
@@ -79,7 +95,8 @@
         </a>
         <a href="https://www.tvtime.com/pt_BR/user/16915692/profile" target="_blank">
             <article>
-                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
+                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com"
+                    fetchpriority="high">
                 <aside>
                     <h2>TV Time</h2>
                     <p>Explore minhas preferências em séries, filmes e animes.</p>
@@ -90,11 +107,14 @@
             </article>
         </a>
     </section>
+
     <div id="stars1"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
+
     <script src="./script.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK"></script>
 </body>
+
 </html>
