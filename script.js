@@ -105,15 +105,15 @@ function clearToastTimeout() {
 
 /* SCRIPT COPY BUTTON */
 document.getElementById("copyButton").addEventListener("click", function () {
-  const textToCopy = document.getElementById("textToCopy").innerText;
+  const fixedText = "kaiqcorrea";
   const tempInput = document.createElement("input");
-  tempInput.value = textToCopy;
+  tempInput.value = fixedText;
   document.body.appendChild(tempInput);
   tempInput.select();
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 
-  alert("Texto copiado: " + textToCopy);
+  alert("Texto copiado: " + fixedText);
 });
 
 /* Google tag (gtag.js)  */
