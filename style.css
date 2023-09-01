@@ -236,7 +236,7 @@ article {
   color: var(--color);
   cursor: pointer;
   display: flex;
-  margin: 9px 0;
+  margin: 10px 0;
   max-width: 500px;
   padding: 20px;
   width: 100vw;
