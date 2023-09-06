@@ -188,10 +188,6 @@ a:active {
   cursor: pointer;
 }
 
-#discord {
-  font-size: 1.8rem;
-}
-
 #links {
   align-items: center;
   color: var(--color);
@@ -303,10 +299,6 @@ aside {
     width: 280px;
   }
 
-  #discord {
-    font-size: 1.5rem;
-  }
-
   .link {
     font-size: 1.7rem;
     height: 36px;
@@ -322,10 +314,6 @@ aside {
   .popup {
     font-size: 14px;
     width: 320px;
-  }
-
-  #discord {
-    font-size: 1.7rem;
   }
 
   .link {
