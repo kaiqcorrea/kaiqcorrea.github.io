@@ -103,19 +103,6 @@ function clearToastTimeout() {
   clearTimeout(timeoutId);
 }
 
-/* SCRIPT COPY BUTTON */
-document.getElementById("copyButton").addEventListener("click", function () {
-  const fixedText = "kaiqcorrea";
-  const tempInput = document.createElement("input");
-  tempInput.value = fixedText;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempInput);
-
-  alert("Nome de usuario " + fixedText + " copiado. Envie o pedido de amizade.");
-});
-
 /* Google tag (gtag.js)  */
 window.dataLayer = window.dataLayer || [];
 function gtag() {
