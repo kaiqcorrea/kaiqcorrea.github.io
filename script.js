@@ -113,7 +113,7 @@ document.getElementById("copyButton").addEventListener("click", function () {
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 
-  alert("Texto copiado: " + fixedText);
+  alert("Nome de usuario " + fixedText + " copiado. Envie o pedido de amizade.");
 });
 
 /* Google tag (gtag.js)  */
