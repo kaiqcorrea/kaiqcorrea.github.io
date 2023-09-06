@@ -34,10 +34,6 @@
     content: "\f234"
 }
 
-.fa-plus:before {
-    content: "\2b"
-}
-
 .fa-play:before {
     content: "\f04b"
 }
@@ -56,6 +52,10 @@
 
 .fa-x-twitter:before {
     content: "\e61b"
+}
+
+.fa-discord:before {
+    content: "\f392"
 }
 
 .fa-github:before {
