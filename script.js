@@ -66,9 +66,9 @@ function showToast() {
   const link = document.querySelector(".add");
   link.removeEventListener("click", showToast);
 
-  const popup = document.querySelector(".popup");
-  popup.classList.add("fade-in");
-  popup.classList.add("dsp");
+  const alert = document.querySelector(".alert");
+  alert.classList.add("fade-in");
+  alert.classList.add("dsp");
 
   clearToastTimeout();
 
@@ -79,23 +79,23 @@ function showToast() {
 }
 
 function hideToast() {
-  const popup = document.querySelector(".popup");
-  popup.classList.remove("fade-in");
-  popup.classList.add("fade-out");
+  const alert = document.querySelector(".alert");
+  alert.classList.remove("fade-in");
+  alert.classList.add("fade-out");
   setTimeout(() => {
-    popup.classList.remove("fade-out");
-    popup.classList.remove("dsp");
+    alert.classList.remove("fade-out");
+    alert.classList.remove("dsp");
   }, 800);
 }
 
 function closeToast() {
   clearToastTimeout();
-  const popup = document.querySelector(".popup");
-  popup.classList.remove("fade-in");
-  popup.classList.add("fade-out");
+  const alert = document.querySelector(".alert");
+  alert.classList.remove("fade-in");
+  alert.classList.add("fade-out");
   setTimeout(() => {
-    popup.classList.remove("fade-out");
-    popup.classList.remove("dsp");
+    alert.classList.remove("fade-out");
+    alert.classList.remove("dsp");
   }, 800);
 }
 
