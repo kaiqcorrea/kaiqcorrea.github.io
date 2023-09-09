@@ -6,7 +6,7 @@
 
 ## 📷 Preview
 
-![markdown](https://github.com/kaiqcorrea/link-in-bio/blob/main/screenshot.jpg?raw=true)
+![screenshot](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/screenshot.jpg)
 
 ## 💭 About The Project
 
