@@ -9,15 +9,13 @@
     <link rel="preload" as="script" href="./script.js">
     <link rel="preconnect" as="image" href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
     <link rel="preconnect" as="image"
-        href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://discord.com/">
-    <link rel="preconnect" as="image"
         href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
     <link rel="preconnect" as="image" href="https://avatars0.githubusercontent.com/u/140029352">
     <link rel="preconnect" as="script" href="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK">
     <link rel="stylesheet" href="./fontawesome/all.min.css">
     <link rel="stylesheet" href="./style.css" id="theme-stylesheet">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <title>Kaique | Perfil</title>
+    <title>Kaique | Links</title>
 </head>
 
 <body>
@@ -27,10 +25,10 @@
             <i class="fas fa-sun"></i>
         </button>
         <div class="profile-box">
-            <div class="profile-picture">
+            <a class="profile-picture" href="#popup">
                 <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture"
                     fetchpriority="high">
-            </div>
+            </a>
             <div class="profile-text">
                 <h1>Kaique</h1>
                 <p class="username">@kaiqcorrea</p>
@@ -42,12 +40,13 @@
             </div>
         </div>
     </div>
-    <div class="popup">
+
+    <div class="alert">
         <p><i class="fas fa-check-circle">&nbsp;</i> Agora você pode abrir o arquivo baixado e salvar o contato na sua
             agenda.</p>
         <button class="close-button" onclick="closeToast()">&times;</button>
     </div>
-    </div>
+
     <div id="links">
         <a class="link" href="https://instagram.com/kaiqcorrea" target="_blank">
             <i class="fab fa-instagram"></i>
@@ -94,6 +93,18 @@
             </article>
         </a>
     </section>
+
+    <div class="overlay" id="popup">
+        <div class="popup">
+            <div class="popup-photo">
+                <img src="./QR-Code.jpg" alt="QR Code">
+            </div>
+            <div class="popup-quote">
+                Leia o código QR para adicionar este contato.
+            </div>
+            <a class="popup-close" onclick="history.back()">&times;</a>
+        </div>
+    </div>
 
     <div id="stars1"></div>
     <div id="stars2"></div>
