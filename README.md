@@ -9,7 +9,7 @@
 ### Desktop
 ![Desktop](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/screenshot.jpg)
 ### Mobile
-![Mobile](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/mobile.png)
+![Mobile](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/Mobile.png)
 
 ## 💭 About The Project
 
