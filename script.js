@@ -7,6 +7,7 @@ function toggleTheme() {
   updateLocalStorage();
   updateIcons();
   updateStarsVisibility();
+  updateBackground();
 }
 
 function updateLocalStorage() {
@@ -40,6 +41,7 @@ function updateIcons() {
 
 updateIcons();
 updateStarsVisibility();
+updateBackground();
 
 function updateStarsVisibility() {
   const stars1 = document.getElementById("stars1");
@@ -57,7 +59,21 @@ function updateStarsVisibility() {
   }
 }
 
+function updateBackground() {
+  const body = document.body;
+
+  if ($html.classList.contains("light-mode")) {
+    body.style.background = 'url("./images/cloud.svg")';
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    body.style.backgroundPosition = "bottom center, 50%, 50%";
+  } else {
+    body.style.background = 'radial-gradient(ellipse at bottom, var(--body-gradient1) 0%, var(--body-gradient2) 100%)';
+  }
+}
+
 themeToggle.addEventListener("click", toggleTheme);
+
 
 /* SCRIPT DOWNLOAD VCARD */
 let timeoutId;
