@@ -8,13 +8,12 @@
     <link rel="preload" as="style" href="./fontawesome/all.min.css">
     <link rel="preload" as="script" href="./script.js">
     <link rel="preconnect" as="image" href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
-    <link rel="preconnect" as="image"
-        href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
+    <link rel="preconnect" as="image" href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://spotify.com">
     <link rel="preconnect" as="image" href="https://avatars0.githubusercontent.com/u/140029352">
     <link rel="preconnect" as="script" href="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK">
     <link rel="stylesheet" href="./fontawesome/all.min.css">
     <link rel="stylesheet" href="./style.css" id="theme-stylesheet">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Kaique | Links</title>
 </head>
 
@@ -24,15 +23,25 @@
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
         </button>
+        <a id="adaptive" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()">
+            <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture">
+        </a>
+        <div id="name">
+            Kaique Correa
+            <img src="./images/verified.svg" alt="Verified">
+        </div>
         <div class="profile-box">
             <a class="profile-picture" href="#popup">
                 <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture"
                     fetchpriority="high">
             </a>
             <div class="profile-text">
-                <h1>Kaique</h1>
+                <h1>Kaique Correa
+                    <img src="./images/verified.svg" alt="Verified">
+                </h1>
+
                 <p class="username">@kaiqcorrea</p>
-                <span>&#x1F4CD Goiânia • 28</span>
+                <span class="add3">&#x1F4CD Goiânia • 28</span>
                 <a class="add" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()">
                     <span class="add2">adicionar</span>
                     <i class="fas fa-user-plus"></i>
@@ -42,8 +51,9 @@
     </div>
 
     <div class="alert">
-        <p><i class="fas fa-check-circle">&nbsp;</i> Agora você pode abrir o arquivo baixado e salvar o contato na sua
-            agenda.</p>
+        <p>
+            <i class="fas fa-check-circle">&nbsp;</i> Agora você pode abrir o arquivo baixado e salvar o contato na sua agenda.
+        </p>
         <button class="close-button" onclick="closeToast()">&times;</button>
     </div>
 
@@ -72,7 +82,7 @@
                     fetchpriority="high">
                 <aside>
                     <h2>Spotify</h2>
-                    <p>Dê um play nesse perfil e conheça meu universo musical.</p>
+                    <p>Dê um play nesse perfil e descubra meu universo musical.</p>
                 </aside>
                 <span>
                     <i class="fas fa-play">&nbsp;</i>Play
@@ -85,7 +95,7 @@
                     fetchpriority="high">
                 <aside>
                     <h2>TV Time</h2>
-                    <p>Explore minhas preferências em séries, filmes e animes.</p>
+                    <p>Conheça minhas preferências em séries, filmes e animes.</p>
                 </aside>
                 <span>
                     <i class="fas fa-external-link-alt">&nbsp;</i>Visitar
@@ -97,10 +107,10 @@
     <div class="overlay" id="popup">
         <div class="popup">
             <div class="popup-photo">
-                <img src="./QR-Code.jpg" alt="QR Code">
+                <img src="./images/QR-Code.jpg" alt="QR Code">
             </div>
             <div class="popup-quote">
-                Leia o código QR para adicionar este contato.
+                Leia o código QR para adicionar este contato ou clique no botão adicionar.
             </div>
             <a class="popup-close" onclick="history.back()">&times;</a>
         </div>
