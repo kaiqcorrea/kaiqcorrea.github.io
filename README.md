@@ -6,7 +6,10 @@
 
 ## 📷 Preview
 
-![screenshot](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/screenshot.jpg)
+### Desktop
+![Desktop](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/screenshot.jpg)
+### Mobile
+![Mobile](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/mobile.png)
 
 ## 💭 About The Project
 
