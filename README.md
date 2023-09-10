@@ -7,7 +7,7 @@
 ## 📷 Preview
 
 ### Desktop
-![Desktop](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/screenshot.jpg)
+![Desktop](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/Desktop.png)
 ### Mobile
 ![Mobile](https://raw.githubusercontent.com/kaiqcorrea/kaiqcorrea.github.io/main/images/Mobile.png)
 
