@@ -334,12 +334,14 @@ aside {
 
   #adaptive,
   #adaptive img {
-    position: relative;
     width: 96px;
     height: 96px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-top: 3px;
+    margin-bottom: 10px;
   }
 
   #name {
@@ -347,7 +349,9 @@ aside {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.25;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -437,7 +441,6 @@ aside {
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .popup-close:active {
