@@ -6,16 +6,20 @@
   --body-gradient1: #1b2735;
   --body-gradient2: #090a0f;
   --box-shadow: #ffffff4d;
+  --light: #1f2937;
+  --close: #f6f6f6;
 }
 
 .light-mode:root {
-  --bg-color: #FFF;
-  --border-color: #818cf8;
+  --bg-color: #ffffff99;
+  --border-color: #111827;
   --color: #111827;
-  --pcolor: #777777;
+  --pcolor: #013b52;
   --body-gradient1: #f6f6f6;
   --body-gradient2: #d7def0;
   --box-shadow: #0000004d;
+  --light: #cbe1f4;
+  --close: #cbe1f4;
 }
 
 * {
@@ -84,6 +88,14 @@ a:active {
   text-decoration: initial;
 }
 
+#adaptive {
+  display: none;
+}
+
+#name {
+  display: none;
+}
+
 #profile {
   align-items: center;
   display: flex;
@@ -130,7 +142,7 @@ a:active {
 }
 
 .alert {
-  background-color: #38a169;
+  background-color: var(--light);
   border-radius: 5px;
   box-shadow: 0px 0px 10px #00000033;
   color: var(--color);
@@ -288,10 +300,6 @@ aside {
 }
 
 @media (min-width: 0) and (max-width: 319px) {
-  .profile-text span {
-    display: none;
-  }
-
   .alert {
     font-size: 12px;
     height: 54px;
@@ -306,12 +314,9 @@ aside {
 }
 
 @media (min-width: 320px) and (max-width: 359px) {
-  .add2 {
-    display: none;
-  }
-
   .alert {
     font-size: 14px;
+    padding: 15px;
     width: 320px;
   }
 
@@ -319,6 +324,34 @@ aside {
     font-size: 1.9rem;
     height: 40px;
     width: 40px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 450px) {
+  .profile-box {
+    display: none;
+  }
+
+  #adaptive,
+  #adaptive img {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  #name {
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
   }
 }
 
@@ -354,7 +387,7 @@ aside {
   width: auto;
   height: auto;
   margin: 3.5rem;
-  background-color: var(--bg-color);
+  background-color: var(--light);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   transform: scale(0);
@@ -399,7 +432,7 @@ aside {
   height: 2.5rem;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--pcolor);
+  color: var(--close);
   line-height: 2rem;
   text-align: center;
   cursor: pointer;
@@ -408,7 +441,7 @@ aside {
 }
 
 .popup-close:active {
-  color: var(--pcolor);
+  color: var(--close);
 }
 
 /*------------------------CREDITS------------------------*/
