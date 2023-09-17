@@ -339,7 +339,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    clip-path: url(#svg-pfp);
     margin-top: 3px;
     margin-bottom: 10px;
   }
