@@ -66,6 +66,14 @@
     content: "\f1b6"
 }
 
+.fa-spotify:before {
+    content: "\f1bc"
+}
+
+.fa-youtube:before {
+    content: "\f167"
+}
+
 @font-face {
     font-family: "Font Awesome 6 Brands";
     font-style: normal;
