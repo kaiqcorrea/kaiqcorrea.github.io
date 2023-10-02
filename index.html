@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A DIY alternative to services like Linktree.">
+    <meta name="description" content="Todas as minhas redes, em um só link.">
     <meta name="author" content="Kaique Correa">
     <meta name="keywords"
-        content="Linktree, Linktree Alternative, Link in bio, Link bio, Linktree clone, Linktree custom, Kaique, Kaique Correa">
+        content="Kaique Correa, Kaique Correa Links, Kaique, Linktree, Linktree Alternative, Link in bio, Link bio, Linktree clone, Linktree custom">
     <link rel="preload" as="style" type="text/css" href="./style.css">
-    <link rel="preload" as="style" href="./fontawesome/all.min.css">
-    <link rel="preload" as="script" href="./script.js">
-    <link rel="preload" as="image" type="image/svg+xml" href="images/cloud.svg">
-    <link rel="preload" as="image" type="image/svg+xml" href="images/verified.svg">
-    <link rel="preconnect" as="image" href="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com">
-    <link rel="preconnect" as="image" href="https://avatars0.githubusercontent.com/u/140029352">
+    <link rel="preload" as="style" type="text/css" href="./fontawesome/all.min.css">
+    <link rel="preload" as="script" type="text/javascript" href="./script.js">
+    <link rel="preload" as="image" type="image/svg+xml" href="./images/cloud.svg">
+    <link rel="preload" as="image" type="image/svg+xml" href="./images/verified.svg">
+    <link rel="preload" as="image" type="image/webp" href="./images/TV-Time.webp">
+    <link rel="preload" as="image" type="image/webp" href="./images/profile.webp">
     <link rel="preconnect" as="script" href="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK">
     <link rel="stylesheet" href="./fontawesome/all.min.css">
     <link rel="stylesheet" href="./style.css" id="theme-stylesheet">
@@ -29,7 +29,7 @@
             <i class="fas fa-sun"></i>
         </div>
         <a id="adaptive" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()">
-            <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture">
+            <img src="./images/profile.webp" alt="Profile Picture" width="96px" height="96px">
             <svg>
                 <defs>
                     <clipPath id="svg-pfp">
@@ -41,16 +41,15 @@
         </a>
         <div id="name">
             Kaique Correa&nbsp;
-            <img src="./images/verified.svg" alt="Verified" type="image/svg+xml">
+            <img src="./images/verified.svg" alt="Verified" type="image/svg+xml" width="16px" height="16px">
         </div>
         <div class="profile-box">
             <a class="profile-picture" href="#popup">
-                <img src="https://avatars0.githubusercontent.com/u/140029352" alt="Profile Picture"
-                    fetchpriority="high">
+                <img src="./images/profile.webp" alt="Profile Picture"                 fetchpriority="high" width="154px" height="154px">
             </a>
             <div class="profile-text">
                 <h1>Kaique Correa
-                    <img src="./images/verified.svg" alt="Verified" type="image/svg+xml">
+                    <img src="./images/verified.svg" alt="Verified" type="image/svg+xml" width="16px" height="16px">
                 </h1>
 
                 <p class="username">@kaiqcorrea</p>
@@ -104,7 +103,7 @@
         </a>
         <a href="https://www.tvtime.com/pt_BR/user/16915692/profile" target="_blank">
             <article>
-                <img src="https://www.google.com/s2/favicons?sz=28&amp;domain_url=https://tvtime.com" alt="TV Time Icon"
+                <img src="./images/TV-Time.webp" alt="TV Time" width="28px" height="28px"
                     fetchpriority="high">
                 <aside>
                     <h2>TV Time</h2>
@@ -120,7 +119,7 @@
     <div class="overlay" id="popup">
         <div class="popup">
             <div class="popup-photo">
-                <img src="./images/QR-Code.png" alt="QR Code">
+                <img src="./images/QR-Code.png" alt="QR Code" width="100%" height="100%">
             </div>
             <div class="popup-quote">
                 Leia o código QR para adicionar este contato ou clique no botão adicionar.
@@ -136,15 +135,6 @@
     <script src="./script.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "G-MFGYPJ17VK");
-    </script>
 </body>
 
 </html>
