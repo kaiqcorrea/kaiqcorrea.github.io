@@ -110,7 +110,7 @@ a:active {
   border-radius: 0.313rem;
   color: var(--color);
   display: flex;
-  margin: 10px 0px;
+  margin: 10px 0;
   max-width: 31.25rem;
   position: relative;
   width: 100vw;
@@ -144,7 +144,7 @@ a:active {
 .alert {
   background-color: var(--light);
   border-radius: 5px;
-  box-shadow: 0px 0px 10px #00000033;
+  box-shadow: 0 0 10px #00000033;
   color: var(--color);
   display: none;
   height: 67px;
@@ -204,7 +204,7 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 7px 0px;
+  margin: 7px 0;
 }
 
 .link {
@@ -243,7 +243,7 @@ article {
   border: 1px solid var(--border-color);
   border-bottom: 3px solid var(--border-color);
   border-radius: 5px;
-  box-shadow: var(--box-shadow) 8px 8px 0px 0px;
+  box-shadow: var(--box-shadow) 8px 8px 0 0;
   color: var(--color);
   cursor: pointer;
   display: flex;
@@ -255,7 +255,7 @@ article {
 }
 
 article:hover {
-  box-shadow: var(--box-shadow) 4px 4px 0px 0px;
+  box-shadow: var(--box-shadow) 4px 4px 0 0;
   transform: translate(4px, 4px);
 }
 
@@ -369,17 +369,17 @@ aside {
     margin: 10px 0;
     padding: 20px;
     width: calc(100vw - 40px);
-    box-shadow: var(--box-shadow) 8px 8px 0px 0px;
+    box-shadow: var(--box-shadow) 8px 8px 0 0;
   }
 
   article:hover {
     transform: translate(4px, 4px);
-    box-shadow: var(--box-shadow) 4px 4px 0px 0px;
+    box-shadow: var(--box-shadow) 4px 4px 0 0;
   }
 
   article:active {
     transform: translate(4px, 4px);
-    box-shadow: var(--box-shadow) 4px 4px 0px 0px;
+    box-shadow: var(--box-shadow) 4px 4px 0 0;
   }
 }
 
@@ -479,7 +479,7 @@ aside {
 
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 
   to {
