@@ -68,12 +68,12 @@ function updateBackground() {
     body.style.backgroundSize = "cover";
     body.style.backgroundPosition = "bottom center, 50%, 50%";
   } else {
-    body.style.background = 'radial-gradient(ellipse at bottom, var(--body-gradient1) 0%, var(--body-gradient2) 100%)';
+    body.style.background =
+      "radial-gradient(ellipse at bottom, var(--body-gradient1) 0%, var(--body-gradient2) 100%)";
   }
 }
 
 themeToggle.addEventListener("click", toggleTheme);
-
 
 /* SCRIPT DOWNLOAD VCARD */
 let timeoutId;
@@ -122,7 +122,7 @@ function clearToastTimeout() {
 /* SCRIPT GOOGLE ANALYTICS */
 window.dataLayer = window.dataLayer || [];
 function gtag() {
-    dataLayer.push(arguments);
+  dataLayer.push(arguments);
 }
 gtag("js", new Date());
 
