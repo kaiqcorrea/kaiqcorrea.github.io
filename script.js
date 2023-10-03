@@ -127,9 +127,9 @@ function clearToastTimeout() {
     j = d.createElement(s),
     dl = l != "dataLayer" ? "&l=" + l : "";
   j.async = true;
-  j.src = "https://www.googletagmanager.com/gtag/js?id=G-MFGYPJ17VK" + i + dl;
+  j.src = "https://www.googletagmanager.com/gtag/js?id=" + i + dl;
   f.parentNode.insertBefore(j, f);
-})(window, document, "script", "dataLayer", "GTM-XXXX");
+})(window, document, "script", "dataLayer", "G-MFGYPJ17VK");
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
