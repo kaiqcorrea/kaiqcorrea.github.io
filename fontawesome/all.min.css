@@ -5,21 +5,12 @@
  */
 
 .fab,
-.fas,
 .fa-brands,
+.fas,
 .fa-solid {
     display: inline-block;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
     font-style: normal;
-}
-
-.fa-solid,
-.fas {
-    font-family: "Font Awesome 6 Free";
-}
-
-.fa-brands,
-.fab {
-    font-family: "Font Awesome 6 Brands"
 }
 
 .fa-moon:before {
@@ -60,10 +51,6 @@
 
 .fa-github:before {
     content: "\f09b"
-}
-
-.fa-steam:before {
-    content: "\f1b6"
 }
 
 .fa-spotify:before {
