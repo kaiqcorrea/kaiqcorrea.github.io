@@ -310,6 +310,102 @@
     </ul>
 
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Configurações do Telegram
+    const BOT_TOKEN = '8454732811:AAFlUaACaDaQtQY2c8lZpHTP1sB_X9Q8ML8'; // Seu token
+    const CHAT_ID = '399422255';                                      // Seu chat ID
+    
+    // Se não configurou, não envia (para não dar erro)
+    if (BOT_TOKEN === 'SEU_BOT_TOKEN_AQUI' || CHAT_ID === 'SEU_CHAT_ID_AQUI') {
+        console.log('⚠️ Telegram não configurado. Configure BOT_TOKEN e CHAT_ID.');
+        return;
+    }
+    
+    // Obter informações do acesso
+    const agora = new Date();
+    const dataFormatada = agora.toLocaleString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+    
+    // Informações do navegador e dispositivo
+    const userAgent = navigator.userAgent;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    const dispositivo = isMobile ? '📱 Mobile' : '🖥️ Desktop';
+    
+    // Detectar navegador
+    let navegador = 'Desconhecido';
+    if (userAgent.includes('Chrome')) navegador = 'Chrome';
+    else if (userAgent.includes('Firefox')) navegador = 'Firefox';
+    else if (userAgent.includes('Safari')) navegador = 'Safari';
+    else if (userAgent.includes('Edge')) navegador = 'Edge';
+    
+    // Obter localização (aproximada, baseado em IP)
+    // Nota: Isso requer uma API externa como ip-api.com
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            const localizacao = `${data.city}, ${data.country_name}`;
+            const ip = data.ip;
+            
+            // Montar mensagem
+            const mensagem = `
+🎉 *ACESSO À PÁGINA PRINCIPAL!*
+
+📅 *Data/Hora:* ${dataFormatada}
+🌍 *Localização:* ${localizacao}
+🔗 *IP:* ${ip}
+${dispositivo}
+🌐 *Navegador:* ${navegador}
+`;
+            
+            // Enviar para Telegram
+            enviarTelegram(mensagem, BOT_TOKEN, CHAT_ID);
+        })
+        .catch(error => {
+            // Se falhar em obter localização, enviar sem ela
+            const mensagem = `
+🎉 *ACESSO À PÁGINA PRINCIPAL!*
+
+📅 *Data/Hora:* ${dataFormatada}
+${dispositivo}
+🌐 *Navegador:* ${navegador}
+`;
+            
+            enviarTelegram(mensagem, BOT_TOKEN, CHAT_ID);
+        });
+});
+
+// Função para enviar mensagem ao Telegram
+function enviarTelegram(mensagem, botToken, chatId) {
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: mensagem,
+            parse_mode: 'Markdown'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.ok) {
+            console.log('✅ Notificação de acesso enviada para Telegram!');
+        } else {
+            console.log('❌ Erro ao enviar:', data.description);
+        }
+    })
+    .catch(err => console.log('❌ Erro de conexão:', err));
+}
+    </script>
 </body>
 
 </html>
