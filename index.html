@@ -8,12 +8,14 @@
     <meta name="author" content="Kaique Correa">
     <meta name="keywords"
         content="Kaique Correa, Kaique Correa Links, Kaique, Linktree, Linktree Alternative, Link in bio, Link bio, Linktree clone, Linktree custom">
-    <link rel="canonical" href="https://kaiqcorrea.github.io/"/>
+    <link rel="canonical" href="https://kaiqcorrea.com" />
     <link rel="preload" as="style" type="text/css" href="./style.css">
     <link rel="preload" as="style" type="text/css" href="./fontawesome/all.min.css">
     <link rel="preload" as="image" type="image/svg+xml" href="./images/cloud.svg">
     <link rel="preload" as="image" type="image/svg+xml" href="./images/verified.svg">
-    <link rel="preload" as="image" type="image/webp" href="./images/TV-Time.webp">
+    <link rel="preload" as="image" type="image/png" href="./images/mac-mini-m4.png">
+    <link rel="preload" as="image" type="image/png" href="./images/LoL.png">
+    <link rel="preload" as="image" type="image/png" href="./images/TFT.png">
     <link rel="preload" as="image" type="image/png" href="./images/profile.png">
     <link rel="preload" as="script" type="text/javascript" href="./script.js">
     <link rel="stylesheet" href="./fontawesome/all.min.css">
@@ -23,51 +25,20 @@
 </head>
 
 <body>
-    <div id="profile">
-        <div id="theme-toggle" class="theme-toggle">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-        </div>
-        <a id="adaptive" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()">
-            <img src="./images/profile.png" alt="Profile Picture" width="96px" height="96px">
-            <svg>
-                <defs>
-                    <clipPath id="svg-pfp">
-                        <path
-                            d="M92.762 35.497a166.272 166.272 0 0 0-12.216-22.511l-1.493-2.283C75.331 4.958 69.376 1.301 62.838.745L60.217.52a143.613 143.613 0 0 0-24.432 0l-2.622.225c-6.537.556-12.493 4.213-16.214 9.958l-1.493 2.303A165.943 165.943 0 0 0 3.24 35.518L2.112 38.04c-2.816 6.301-2.816 13.616 0 19.919L3.24 60.48a165.883 165.883 0 0 0 12.216 22.512l1.493 2.302c3.721 5.746 9.677 9.404 16.214 9.96l2.622.225c8.131.694 16.3.694 24.432 0l2.621-.225c6.542-.564 12.498-4.232 16.215-9.99l1.493-2.303a166.044 166.044 0 0 0 12.216-22.512l1.127-2.522a24.542 24.542 0 0 0 0-19.917l-1.127-2.513Z" />
-                    </clipPath>
-                </defs>
-            </svg>
-        </a>
-        <div id="name">
-            Kaique Correa&nbsp;
-            <img src="./images/verified.svg" alt="Verified" type="image/svg+xml" width="16px" height="16px">
-        </div>
-        <div class="profile-box">
-            <a class="profile-picture" href="#popup">
-                <img src="./images/profile.png" alt="Profile Picture"                 fetchpriority="high" width="154px" height="154px">
-            </a>
-            <div class="profile-text">
-                <h1>Kaique Correa
-                    <img src="./images/verified.svg" alt="Verified" type="image/svg+xml" width="16px" height="16px">
-                </h1>
 
-                <p class="username">@kaiqcorrea</p>
-                <span class="add3"></span>
-                <a class="add" href="./download/contato.vcf" type="text/vcard" download onclick="showToast()">
-                    <span class="add2">adicionar</span>
-                    <i class="fas fa-user-plus"></i>
-                </a>
-            </div>
-        </div>
+    <div id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
     </div>
 
-    <div class="alert">
-        <p>
-            <i class="fas fa-check-circle">&nbsp;</i> Agora você pode abrir o arquivo baixado e salvar o contato na sua
-            agenda.
-        </p>
-        <button class="close-button" onclick="closeToast()">&times;</button>
+    <div id="profile">
+        <div id="adaptive">
+            <img src="./images/profile.png" alt="Profile Picture">
+        </div>
+        <div id="name">
+            Kaique Correa&nbsp;
+            <img src="./images/verified.svg" alt="Verified" type="image/svg+xml" width="18" height="18">
+        </div>
     </div>
 
     <div id="links">
@@ -89,7 +60,8 @@
     </div>
 
     <section>
-        <a href="https://youtube.com/playlist?list=PLsXU0fd3OyCTQEkOlxaMael9kVkxUuAF0&si=Qaf2SpgvXbEg4tny" target="_blank" rel="external">
+        <a href="https://youtube.com/playlist?list=PLsXU0fd3OyCTQEkOlxaMael9kVkxUuAF0&si=Qaf2SpgvXbEg4tny"
+            target="_blank" rel="external">
             <article>
                 <i class="fa-brands fa-youtube yt">&nbsp;</i>
                 <aside>
@@ -103,8 +75,29 @@
         </a>
         <a href="https://app.tvtime.com/user/16915692" target="_blank" rel="external">
             <article>
-                <img src="./images/TV-Time.webp" alt="TV Time" width="32px" height="32px"
-                    fetchpriority="high">
+                <svg class="tvtime" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 875 875">
+                    <defs>
+                        <filter id="filtroMono">
+                            <feColorMatrix type="saturate" values="0"/>
+                        </filter>
+                        <style>
+                            .cls-1{fill:var(--tvtime1);}
+                            .cls-2{fill:var(--tvtime2);}
+                            .cls-3{fill:var(--tvtime3);}
+                            .cls-4{fill:var(--tvtime4);}
+                            .cls-5{fill:var(--tvtime5);}
+                            .cls-6{fill:var(--tvtime6);}
+                        </style>
+                    </defs>
+                    <g filter="url(#filtroMono)">
+                        <rect class="cls-1" x="0.43" y="0.33" width="874.57" height="874.57"/>
+                        <rect class="cls-2" x="175.34" y="174.74" width="174.91" height="174.91"/>
+                        <rect class="cls-3" x="350.26" y="174.74" width="174.91" height="174.91"/>
+                        <rect class="cls-4" x="525.17" y="174.74" width="174.91" height="174.91"/>
+                        <rect class="cls-5" x="350.26" y="349.66" width="174.91" height="174.91"/>
+                        <rect class="cls-6" x="350.26" y="524.57" width="174.91" height="174.91"/>
+                    </g>
+                </svg>
                 <aside>
                     <h2>TV Time</h2>
                     <p>Conheça minhas preferências em séries, filmes e animes.</p>
@@ -116,25 +109,99 @@
         </a>
     </section>
 
-    <div class="overlay" id="popup">
-        <div class="popup">
-            <div class="popup-photo">
-                <img src="./images/QR-Code.png" alt="QR Code" width="100%" height="100%">
+    <section class="configs">
+        <article class="setup-card">
+            <div class="setup-header">
+                <img src="./images/mac-mini-m4.png" alt="Mac mini M4">
+                <p>Mac mini M4</p>
             </div>
-            <div class="popup-quote">
-                Leia o código QR para adicionar este contato ou clique no botão adicionar.
+            <div class="setup-grid">
+                <div class="setup-details">
+                    <span class="setup-label">Mouse</span>
+                    <span class="setup-value">Attack Shark X6</span>
+                </div>
+                <div class="setup-details">
+                    <span class="setup-label">Teclado</span>
+                    <span class="setup-value">Machenike K500A-B84 • HUANO Red</span>
+                </div>
+                <div class="setup-details">
+                    <span class="setup-label">Headset</span>
+                    <span class="setup-value">FIFINE AmpliGame H6</span>
+                </div>
+                <div class="setup-details">
+                    <span class="setup-label">Monitor</span>
+                    <span class="setup-value">GIGABYTE G24F2 24" 180Hz FHD</span>
+                </div>
             </div>
-            <a class="popup-close" href="#" onclick="history.back()">&times;</a>
-        </div>
-    </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-column">
+                <div class="column">
+                    <span class="svg-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="24" height="24" fill="var(--color)">
+                            <path
+                                d="M54.16,13.81a34.84,34.84,0,0,1,26.5,47.9,34.42,34.42,0,0,1-5.52,9H86.88A44.42,44.42,0,0,0,54.16,4.1Z" />
+                            <path
+                                d="M20.27,82.37v-14a34.61,34.61,0,0,1-6.48-20.23,34.61,34.61,0,0,1,6.48-20.24V14a44.4,44.4,0,0,0,0,68.41Z" />
+                            <polygon
+                                points="47.5 0.06 22.06 0.06 26.92 10.01 26.92 86.29 22.11 96.13 79.78 96.13 85.05 77.32 47.5 77.32 47.5 0.06" />
+                        </svg>
+                        League of Legends
+                    </span>
+                </div>
+                <div class="game-info">
+                    <div class="game-mode">
+                        <span class="mode-label">Ranqueada Solo/Duo</span>
+                        <div class="mode-details">
+                            <span class="elo">Platina III</span>
+                        </div>
+                    </div>
+                    <div class="game-mode">
+                        <span class="mode-label">Flex</span>
+                        <div class="mode-details">
+                            <span class="elo">Unranked</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-divider"></div>
+
+            <div class="game-column">
+                <div class="column">
+                    <span class="svg-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.9 0.525721 500.2 500.6" width="24"
+                            height="24">
+                            <path
+                                d="M 333.4687 501 C 332.2193 500.2153 331.5139 498.844 330.6466 498.7326 C 312.6778 496.4227 294.8968 492.9843 277.6872 487.441 C 259.9445 481.726 242.2888 475.5315 225.1272 468.2861 C 210.5591 462.1357 196.4634 454.6939 182.6861 446.8921 C 169.5601 439.4591 156.7915 431.2791 144.4889 422.5493 C 136.5535 416.9185 129.6746 409.7775 122.4625 403.1604 C 119.9711 400.8745 117.8684 398.157 115.6587 395.5762 C 114.7467 394.5111 114.0202 393.2871 113.2094 392.1354 C 113.6234 391.6901 114.0375 391.2448 114.4515 390.7996 C 121.7027 394.894 128.8442 399.1991 136.2272 403.0402 C 153.1703 411.855 169.9139 421.1559 187.3377 428.9137 C 203.1673 435.9618 219.6884 441.5226 236.0978 447.1784 C 246.2721 450.6852 256.7122 453.5625 267.2092 455.947 C 275.8075 457.9002 284.6373 458.9924 293.4238 459.8785 C 296.7999 460.219 300.3401 458.9326 303.8056 458.3875 C 303.9033 457.691 304.001 456.9945 304.0987 456.2981 C 300.8879 454.2041 297.9166 451.5037 294.4235 450.1248 C 281.7148 445.1081 268.7392 440.765 256.0477 435.7074 C 248.0793 432.5319 240.4309 428.5505 232.6533 424.9001 C 225.1999 421.402 217.5358 418.2729 210.3733 414.2528 C 198.2166 407.4296 186.2062 400.3078 174.4589 392.8034 C 162.0949 384.905 149.7755 376.8568 138.0671 368.0372 C 128.4992 360.83 119.7407 352.522 110.8428 344.4599 C 102.8407 337.2096 94.8236 329.9294 87.3726 322.128 C 74.9861 309.1591 63.1421 295.636 54.2978 279.9185 C 48.6494 269.8805 43.2636 259.6114 38.8521 248.9923 C 36.2387 242.7015 35.4857 235.5713 34.3713 228.7409 C 32.9391 219.9629 33.2931 211.1346 36.2245 202.6864 C 39.8267 192.3046 45.8886 183.7327 54.8445 176.9446 C 61.6628 171.7767 69.0121 168.0344 76.9994 165.4796 C 88.2706 161.8744 99.8759 159.7231 111.7451 160.4316 C 120.6891 160.9656 129.6087 162.1152 138.4914 163.3377 C 141.057 163.6908 143.4573 165.2444 145.9334 166.2477 C 145.8905 166.8413 145.8475 167.4349 145.8046 168.0286 C 142.1619 168.1381 138.4792 168.6478 134.8833 168.2889 C 118.0463 166.6081 101.6154 168.5843 86.6435 176.3099 C 77.2787 181.1422 70.8218 189.1356 68.5788 200.4974 C 65.0318 218.4644 70.895 233.8276 79.2294 248.9799 C 85.8646 261.0432 93.2644 272.4673 102.8474 282.4666 C 109.7695 289.6894 115.7615 297.8471 122.9968 304.7151 C 131.9212 313.1863 141.4243 321.1174 151.1846 328.6222 C 165.1867 339.3885 179.4591 349.8309 193.9911 359.8686 C 201.2691 364.8958 209.292 368.8813 217.13 373.0523 C 228.9562 379.3455 240.6008 386.133 252.9046 391.3334 C 265.7924 396.7807 279.3138 400.769 292.6634 405.0686 C 300.0493 407.4474 307.561 409.653 315.1798 411.0307 C 322.847 412.4171 330.7043 412.9012 338.503 413.3599 C 343.8876 413.6767 349.3399 412.9074 354.7166 413.2788 C 364.9443 413.9852 373.9211 410.2696 382.6813 405.8951 C 391.14 401.6713 397.9305 395.714 400.774 386.1692 C 403.1799 378.0935 403.3268 369.9608 401.556 361.8082 C 398.0411 345.6259 388.4859 332.5646 379.4502 319.2114 C 377.288 316.0161 372.6543 313.5325 375.2243 307.8787 C 384.1386 314.3655 393.2146 320.2136 399.4709 329.3268 C 408.4242 342.3687 417.3292 355.444 426.3601 368.4318 C 427.4224 369.9595 429.1487 371.0256 431.6012 373.2387 C 432.283 369.0842 433.2352 366.1808 433.1485 363.3087 C 432.7724 350.8476 427.9359 339.6618 422.1728 328.9405 C 417.9608 321.1047 413.3444 313.4084 408.1374 306.2072 C 402.7541 298.7622 396.4858 291.9514 390.52 284.9352 C 384.8438 278.2597 379.2856 271.461 373.2549 265.1163 C 367.5821 259.1482 361.3264 253.7369 355.4051 248.0002 C 354.0581 246.6951 353.0323 245.0586 351.3911 242.9835 C 358.527 242.3726 363.311 246.4859 367.7065 249.6172 C 379.9744 258.3571 391.7011 267.8842 403.3579 277.4462 C 414.269 286.3964 424.5636 296.0742 433.2357 307.2696 C 442.0923 318.7031 451.6628 329.7675 459.0171 342.1263 C 465.6227 353.2268 470.2935 365.6383 474.5744 377.9055 C 477.3684 385.9117 478.0174 394.6798 479.4942 403.1298 C 482.7793 421.9253 478.1446 439.3755 469.6051 455.8677 C 466.8376 461.2126 462.7173 466.0447 458.4866 470.4036 C 450.7088 478.4169 441.6779 485.2127 431.384 489.3902 C 421.5217 493.3927 410.9325 495.5987 400.6804 498.6535 C 399.5229 498.9984 398.4798 499.7274 397.6918 500.6391 C 376.6458 501 355.2915 501 333.4687 501 Z M 501 3.5 C 497.6958 8.7382 494.1817 13.3455 491.1292 18.2406 C 483.8233 29.9566 476.6378 41.7505 469.5835 53.6198 C 461.3971 67.3943 453.3991 81.2808 445.329 95.1244 C 444.0045 97.3965 442.8503 99.7772 441.4035 101.9664 C 439.4719 104.8894 436.8878 106.0425 433.1069 106.0254 C 394.4507 105.8499 355.7934 105.9146 317.1365 105.9123 C 315.3252 105.9122 313.5139 105.9123 311.4609 105.9123 C 311.4609 195.0041 311.4609 283.7498 311.4609 373.4067 C 308.3631 373.1708 305.4739 373.1505 302.6525 372.7029 C 285.9362 370.051 270.3698 363.5346 254.728 357.5721 C 245.9454 354.2243 237.7738 349.0532 229.7169 344.0728 C 217.1381 336.2971 204.8554 328.0383 192.5598 319.8158 C 191.4012 319.041 190.4169 317.0707 190.4085 315.6493 C 190.2586 290.2391 190.2642 264.8279 190.2523 239.417 C 190.2364 205.6158 190.2337 171.8147 190.2267 138.0135 C 190.2245 127.452 190.2263 116.8904 190.2263 105.8683 C 173.0459 105.8683 156.2602 105.8697 139.4745 105.868 C 116.6475 105.8656 93.8205 105.8601 70.9934 105.8576 C 63.1921 105.8568 63.3821 105.751 59.4131 98.7754 C 55.3897 91.7041 50.9144 84.891 46.6807 77.9382 C 40.9153 68.47 35.1984 58.9724 29.448 49.495 C 21.7964 36.8842 14.17 24.2576 6.4392 11.6954 C 5.0616 9.4569 3.2291 7.4984 1.3033 5.7053 C 1 4.3333 1 2.6667 1 1 C 166.3333 1 331.6667 0.9945 496.9999 1.1028 C 498.2525 1.1036 501.3148 -0.963 501 3.5 Z"
+                                stroke="var(--color)" stroke-width="0.1" fill="var(--color)" />
+                        </svg>Teamfight Tactics
+                    </span>
+                </div>
+                <div class="game-info">
+                    <div class="game-mode">
+                        <span class="mode-label">Ranqueada</span>
+                        <div class="mode-details">
+                            <span class="elo">Diamante IV</span>
+                        </div>
+                    </div>
+                    <div class="game-mode">
+                        <span class="mode-label">Dupla dinâmica</span>
+                        <div class="mode-details">
+                            <span class="elo">Diamante IV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
 
     <div id="stars1"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
 
     <script src="./script.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="./download/gtag.js"></script>
 </body>
 
 </html>
